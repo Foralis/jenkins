@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Stage 1') {
+        stage('Stage 2') {
             steps {
-                echo '"Hello world from git!"'
+                echo '"Stage from another git branch!"'
             }
         }
     }
