@@ -1,9 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        docker {image 'node:16.13.1-alpine'}
+    }
     stages {
-        stage('Stage 2') {
+        stage('Test') {
             steps {
-                echo '"Stage from another git branch!"'
+                sh 'node --version'
             }
         }
     }
